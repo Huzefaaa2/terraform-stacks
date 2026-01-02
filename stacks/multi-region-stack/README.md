@@ -18,6 +18,11 @@ graph TD
   networking --> app["App component (ALB + ECS)"]
   data --> app
   app --> traffic["Traffic component (Route53 failover)"]
+  A[Stack deployments (prod_east, prod_west...)] --> B[Networking component]
+  A --> C[Data component (DynamoDB global table)]
+  B --> D[App component (ALB + ECS)]
+  C --> D
+  D --> E[Traffic component (Route53 failover)]
 ```
 
 ## Contents
