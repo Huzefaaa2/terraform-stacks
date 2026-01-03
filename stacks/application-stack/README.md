@@ -17,7 +17,7 @@ flowchart TD
   networking --> compute["Compute component (ALB + ECS Fargate)"]
   storage --> compute
   compute --> observability["Application component (dashboards + alarms)"]
-  observability -->|visibility| operators((Operators))
+  observability -->|visibility| operators[((Operators))]
 ```
 
 ## Contents
