@@ -61,7 +61,7 @@ sequenceDiagram
 ```
 
 ## Connect
-If this repository helps you ship infrastructure faster, follow along and connect: [LinkedIn](https://www.linkedin.com/in/huzefaaa2)
+If this repository helps you ship infrastructure faster, follow along and connect: [LinkedIn](https://www.linkedin.com/in/huzefaaa)
 
 ---
 
