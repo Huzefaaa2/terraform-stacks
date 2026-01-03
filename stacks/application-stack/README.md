@@ -11,13 +11,13 @@ An enterprise-ready Terraform Stack that deploys a full web application footprin
 ## Architecture
 
 ```mermaid
-graph TD
-  A[Stack inputs (environment, region, deployments)] --> B[Networking component]
-  B --> C[Storage component (RDS + Secrets Manager)]
-  B --> D[Compute component (ALB + ECS Fargate)]
-  C --> D
-  D --> E[Application component (dashboards + alarms)]
-  E -->|visibility| F[(Operators)]
+flowchart TD
+  inputs["Stack inputs: environment, region, deployments"] --> networking["Networking component"]
+  networking --> storage["Storage component (RDS + Secrets Manager)"]
+  networking --> compute["Compute component (ALB + ECS Fargate)"]
+  storage --> compute
+  compute --> observability["Application component (dashboards + alarms)"]
+  observability -->|visibility| operators[((Operators))]
 ```
 
 ## Contents
