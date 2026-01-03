@@ -1,0 +1,42 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "elasticloadbalancing:AddListenerCertificates",
+        "elasticloadbalancing:AddTags",
+        "elasticloadbalancing:CreateListener",
+        "elasticloadbalancing:CreateLoadBalancer",
+        "elasticloadbalancing:CreateRule",
+        "elasticloadbalancing:CreateTargetGroup",
+        "elasticloadbalancing:DeleteListener",
+        "elasticloadbalancing:DeleteLoadBalancer",
+        "elasticloadbalancing:DeleteRule",
+        "elasticloadbalancing:DeleteTargetGroup",
+        "elasticloadbalancing:DeregisterTargets",
+        "elasticloadbalancing:Describe*",
+        "elasticloadbalancing:ModifyListener",
+        "elasticloadbalancing:ModifyLoadBalancerAttributes",
+        "elasticloadbalancing:ModifyRule",
+        "elasticloadbalancing:RegisterTargets",
+        "elasticloadbalancing:SetWebACL",
+        "elasticloadbalancing:SetIpAddressType",
+        "elasticloadbalancing:SetSecurityGroups",
+        "elasticloadbalancing:SetSubnets",
+        "elasticloadbalancing:RemoveTags"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["ec2:AuthorizeSecurityGroupIngress", "ec2:RevokeSecurityGroupIngress", "ec2:Describe*"],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["iam:CreateServiceLinkedRole", "iam:GetServerCertificate", "iam:ListServerCertificates"],
+      "Resource": "*"
+    }
+  ]
+}
